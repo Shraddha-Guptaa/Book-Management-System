@@ -1,0 +1,78 @@
+﻿@model List<Product>
+
+@*     <partial name="_Notification" /> thif partial view aded on layout so that notiifrcation work on each page
+ *@
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-md-6">
+            <h2>List of Products</h2>
+        </div>
+        <div class="col-md-6">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-secondary form-control text-dark">Create Products</a>
+        </div>
+
+        <table id="myTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Product Name
+                    </th>
+                    <th>
+                        ISBN
+                    </th>
+                   
+                    <th>
+                        Author
+                    </th>
+                    <th>
+                        Last Price
+                    </th>
+                    <th>
+                        Category
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            @*     <tbody>
+            @foreach (var obj in Model.OrderBy(u => u.ProductId))
+            {
+                <tr>
+                    <td>
+                        @obj.title
+                    </td>
+                    <td>
+                        @obj.description
+                    </td>
+                    <td>
+                        @obj.ISBN
+                    </td>
+                    <td>
+                        @obj.Author
+                    </td>
+                    <td>
+                        @obj.Lastprice
+                    </td>
+                    <td>
+                        @obj.category.name
+                    </td>
+
+                    <td>
+                        <a type="submit" asp-action="Upsert" asp-route-id="@obj.ProductId" class="form-control btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <a type="submit" asp-action="Delete" asp-route-id="@obj.ProductId" class="form-control btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody> *@
+        </table>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/product.js"></script>
+}

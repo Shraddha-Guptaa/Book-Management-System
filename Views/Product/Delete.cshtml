@@ -1,0 +1,59 @@
+﻿@model Product
+
+<form method="post">
+    <input asp-for="ProductId" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-dark">Edit Product</h2>
+        </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="col-md-12 form-control">
+            <label>Product Name</label>
+            <input type="text" asp-for="title" class="form-control" />
+            <span asp-validation-for="title" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>Description</label>
+            <input type="text" asp-for="description" class="form-control" />
+            <span asp-validation-for="description" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>ISBN</label>
+            <input type="text" asp-for="ISBN" class="form-control" />
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>Author</label>
+            <input type="text" asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>Lastprice</label>
+            <input type="text" asp-for="Lastprice" class="form-control" />
+            <span asp-validation-for="Lastprice" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>price</label>
+            <input type="text" asp-for="price" class="form-control" />
+            <span asp-validation-for="price" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>Price for 50+</label>
+            <input type="text" asp-for="price50" class="form-control" />
+            <span asp-validation-for="price50" class="text-danger"></span>
+        </div>
+        <div class="col-md-12 form-control">
+            <label>Price for 100+</label>
+            <input type="text" asp-for="price100" class="form-control" />
+            <span asp-validation-for="price100" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-danger form-control">Delete</button>
+            </div>
+            <div class="col-md-6">
+                <a asp-controller="Product" asp-action="Index" class=" btn btn-secondary form-control text-dark">Back To List</a>
+            </div>
+        </div>
+    </div>
+</form>
